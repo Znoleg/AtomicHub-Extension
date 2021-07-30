@@ -5,7 +5,23 @@
     "content_scripts": [
         {
             "matches": ["https://wax.atomichub.io/market/sale/*"],
-            "js": ["content.js"]
+            "js": ["market.js"]
+        },
+        {
+            "matches": ["https://wax.atomichub.io/drops/*"],
+            "js": ["drops.js"]
+        },
+        {
+            "matches": ["https://all-access.wax.io/"],
+            "js": ["login.js"]
+        },
+        {
+            "matches": ["https://all-access.wax.io/cloud-wallet/signing/"],
+            "js": ["signing.js"]
         }
-    ]
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Bot"
+    }
 }
